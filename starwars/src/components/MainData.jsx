@@ -1,10 +1,11 @@
 import React, { useState, useEffect} from 'react';
 import axios from 'axios';
+import {PageContainer, HeaderContainer} from './Styles';
 
 import MainCards from './MainCards';
 
 const MainData = () => {
-    const [data, setData] = useState(0);
+    const [data, setData] = useState('');
 
 useEffect(() => {
       axios
@@ -16,12 +17,10 @@ useEffect(() => {
 
         })
         .catch(err => {console.log('Error Will Robinson', err)})
-    },
-[])
+    },[])
 
     return(
-        
-        <div>
+        <PageContainer>
            {data.map((stats, index) => {
                console.log('this is stats', stats)
                return(
@@ -29,7 +28,7 @@ useEffect(() => {
                )
             })}
             
-        </div>
+        </PageContainer>
         
     )
 
