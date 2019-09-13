@@ -1,12 +1,16 @@
 import React from 'react';
 
 const MainCards = props => {
-return(
-    <div className="main-title-container">
-        <h1>Welcome to the Millenium Struggle Bus</h1>
-        <h2>Just call me the Captain... JT Kirk</h2>
-    </div>
-)
+    console.log()
+    return(
+        <div className="main-card-container">
+            <h4>{props.name}</h4>
+            
+        </div> 
+        
+       
+
+    );
 }
 
 export default MainCards;

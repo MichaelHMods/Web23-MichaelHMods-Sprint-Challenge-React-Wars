@@ -4,27 +4,33 @@ import axios from 'axios';
 import MainCards from './MainCards';
 
 const MainData = () => {
-    const [char, setChar] = useState();
-    
+    const [junk, setData] = useState();
+
 useEffect(() => {
       axios
-        .get('https://swapi.co/people')
+        .get('https://swapi.co/api/people')
         .then(res => {
-            console.log(res)
+            console.log(res.data.results)
+            const results = res.data.results;
+            setData(results)
+
         })
         .catch(err => {console.log('Error Will Robinson', err)});
     },
 [])
 
-
-
-
-
     return(
+        
         <div>
-            <MainCards/>
-            <h1>happy thoughts</h1>
+           {junk.map((stats, index) => {
+               console.log('this is stats', stats)
+               return(
+                   <MainCards stats={stats} index={index}/>
+               )
+            })}
+            
         </div>
+        
     )
 
 }
