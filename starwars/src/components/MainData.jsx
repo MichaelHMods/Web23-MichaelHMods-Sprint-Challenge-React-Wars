@@ -4,7 +4,7 @@ import axios from 'axios';
 import MainCards from './MainCards';
 
 const MainData = () => {
-    const [junk, setData] = useState(0);
+    const [data, setData] = useState(0);
 
 useEffect(() => {
       axios
@@ -22,7 +22,7 @@ useEffect(() => {
     return(
         
         <div>
-           {junk.map((stats, index) => {
+           {data.map((stats, index) => {
                console.log('this is stats', stats)
                return(
                    <MainCards stats={stats} index={index}/>
