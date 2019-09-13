@@ -4,18 +4,18 @@ import axios from 'axios';
 import MainCards from './MainCards';
 
 const MainData = () => {
-    const [junk, setData] = useState();
+    const [junk, setData] = useState(0);
 
 useEffect(() => {
       axios
-        .get('https://swapi.co/api/people')
+        .get('https://swapi.co/api/people',[])
         .then(res => {
             console.log(res.data.results)
             const results = res.data.results;
             setData(results)
 
         })
-        .catch(err => {console.log('Error Will Robinson', err)});
+        .catch(err => {console.log('Error Will Robinson', err)})
     },
 [])
 
