@@ -25,7 +25,7 @@ const CardsMain = styled.div  `
 width: 40%;
 background: grey;
 color: red;
-margin: auto 5%;
+margin: 5px 5%;
 `
 
 export {PageContainer, HeaderContainer, MainContainer, CardsMain  }

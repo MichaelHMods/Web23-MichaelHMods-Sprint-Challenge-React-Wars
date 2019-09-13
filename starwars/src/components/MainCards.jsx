@@ -2,11 +2,13 @@ import React from 'react';
 import {MainContainer, CardsMain  } from './Styles';
 
 const MainCards = props => {
-    console.log()
+    console.log(props.stats.name)
     return(
         <MainContainer>
         <CardsMain>
-            <h4>{props.name}</h4>
+            <h4>{props.stats.name}</h4>
+            <p>{props.stats.height}cm</p>
+            <p>{props.stats.mass}kg</p>
             
         </CardsMain> 
         </MainContainer>

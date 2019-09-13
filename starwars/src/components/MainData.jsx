@@ -5,7 +5,7 @@ import {PageContainer, HeaderContainer} from './Styles';
 import MainCards from './MainCards';
 
 const MainData = () => {
-    const [data, setData] = useState('');
+    const [data, setData] = useState([]);
 
 useEffect(() => {
       axios
